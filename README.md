@@ -29,6 +29,6 @@ API DOCUMENTATION
         <td>delete</td>
         <td>/api/todo/{idtodo}/delete</td>
         <td>empty</td>
-        <td>{ data:empty<span style="font-size: 1rem;">message: sting}</span>http<div>200/404</td>
+        <td>{ data:empty <span style="font-size: 1rem;">message: sting}</span>http<div>200/404</td>
     </tr>
 </table>
