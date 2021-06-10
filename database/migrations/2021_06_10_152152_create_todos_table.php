@@ -17,7 +17,7 @@ class CreateTodosTable extends Migration
             $table->id();
             $table->string('title',50);
             $table->string('description', 200)->nullable();
-            $table->string('date_now')->nullable();
+            $table->string('date_start')->nullable();
             $table->string('date_end')->nullable();
             $table->enum('status' , ['NEW', 'COMPLETED'])->default('NEW');
         });

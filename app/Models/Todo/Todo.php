@@ -10,7 +10,7 @@ use Illuminate\Database\Eloquent\Model;
  * @package App\Models\Todo
  * @property string $title,
  * @property string $descrtiption
- * @property string $date_now
+ * @property string $date_start
  * @property string $date_end
  * @property string $status
  *
@@ -30,7 +30,7 @@ class Todo extends Model
     const API_FIELS = [
         'title',
         'description',
-        'date_now',
+        'date_start',
         'date_end',
         'status',
     ];
@@ -38,7 +38,7 @@ class Todo extends Model
     protected $fillable = [
         'title',
         'description',
-        'date_now',
+        'date_start',
         'date_end',
         'status',
     ];
