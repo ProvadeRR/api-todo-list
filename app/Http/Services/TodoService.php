@@ -8,8 +8,6 @@ use App\Models\Todo\Todo;
 
 class TodoService
 {
-
-
     /**
      * @return array
      */
@@ -19,26 +17,31 @@ class TodoService
 
     /**
      * @param $fields
-     * @return bool
+     * @return null|Todo
      */
-    public function create($fields){
-        $todo = Todo::create($fields);
+    public function create($fields)
+    {
+        $todo = new Todo();
+        $todo->fill($fields);
+        $todo->save();
+        $todo->fresh();
         if(!$todo){
-            return false;
+            return null;
         }
-        return true;
+        return $todo;
     }
 
     /**
      * @param $fields
-     * @return bool
+     * @param $todo
+     * @return null|Todo
      */
     public function update($fields, $todo){
-        $todo = $todo->update($fields);
+        $todo = $todo->fill($fields);
         if(!$todo){
-            return false;
+            return null;
         }
-        return true;
+        return $todo;
     }
 
     /**

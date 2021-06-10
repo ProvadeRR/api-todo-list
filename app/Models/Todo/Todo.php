@@ -43,7 +43,6 @@ class Todo extends Model
         'status',
     ];
 
-    protected $table = 'todos';
 
 
 

@@ -7,12 +7,20 @@ use App\Http\Requests\Todo\CreateFormRequest;
 use App\Http\Services\TodoService;
 use App\Models\Todo\Todo;
 
-
+/**
+ * Class TodoController
+ * @package App\Http\Controllers\Api\Todo
+ * @property $service;
+ */
 
 class TodoController extends ApiController
 {
     protected $service;
 
+    /**
+     * TodoController constructor.
+     * @param TodoService $service
+     */
     public function __construct(TodoService $service)
     {
         $this->service = $service;
